@@ -1,0 +1,7 @@
+<% provide :head_tags do %>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(<%=@place.latitude%>, <%=@place.longitude%>)
+    });
+    </script>
+<% end %>
