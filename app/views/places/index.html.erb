@@ -1,3 +1,14 @@
+
+
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      initIndexMap(<%= @places_coords %>)
+    });
+  </script>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Places</h1>
@@ -22,6 +33,7 @@
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
         <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
@@ -29,3 +41,6 @@
 <br>
 
 <%= link_to 'New Place', new_place_path %>
+
+
+<p><div id="map"></div></p>

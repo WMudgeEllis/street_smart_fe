@@ -14,7 +14,23 @@ function initMap(lat, lng) {
         position: myCoords,
         map: map
     });
+}
 
+function initIndexMap(locations) {
+    var myCoords = new google.maps.LatLng(locations[0][0], locations[0][1]);
+    var mapOptions = {
+        center: myCoords,
+        zoom: 14
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    for (i = 0; i < locations.length; i++) {
+      new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+        map: map
+      });
+    }
 }
 
 function initMap2() {
