@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "hazard",
+            "attributes": {
+                "title": "Cheyenne, Wyoming",
+                "description": "Je suis comme je suis",
+                "longitude": "41.1400",
+                "latitude": "-104.8202",
+                "category": "animate",
+                "user_id": "1",
+                "vote_data": {
+                    "upvote": "0",
+                    "downvote": "0"
+                }
+            }
+        },
+        {
+            "id": "2",
+            "type": "hazard",
+            "attributes": {
+                "title": "North Pole, Alaska",
+                "description": "Je suis fait comme ça",
+                "longitude": "64.7511",
+                "latitude": "-147.3494",
+                "category": "inanimate",
+                "user_id": "1",
+                "vote_data": {
+                    "upvote": "0",
+                    "downvote": "0"
+                }
+            }
+        },
+        {
+            "id": "3",
+            "type": "hazard",
+            "attributes": {
+                "title": "Charlotte, North Carolina",
+                "description": "Quand j'ai envie de rire, oui, je ris aux éclats",
+                "longitude": "35.2271",
+                "latitude": "-80.8431",
+                "category": "inanimate",
+                "user_id": "1",
+                "vote_data": {
+                    "upvote": "0",
+                    "downvote": "0"
+                }
+            }
+        }
+      ]
+}
