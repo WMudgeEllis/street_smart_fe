@@ -18,7 +18,7 @@ require 'webmock/rspec'
 RSpec.configure do |config|
   config.before(:each) do
     json_response = File.read('spec/fixtures/hazards.json')
-    stub_request(:get, "http://localhost:3000/api/v1/hazards/").
+    stub_request(:get, "https://street-smart-be.herokuapp.com/api/v1/hazards/").
       to_return(status: 200, body: json_response)
 
   end
