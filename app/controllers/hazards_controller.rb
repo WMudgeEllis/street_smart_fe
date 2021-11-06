@@ -1,5 +1,7 @@
 class HazardsController < ApplicationController
   def index
-    @hazards= HazardFacade.all_hazards
+    require "pry"; binding.pry
+    ip = request.ip
+    @hazards= HazardFacade.all_hazards(ip)
   end
 end
