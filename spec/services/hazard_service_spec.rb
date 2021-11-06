@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe HazardService do
-  it '#get_hazards_index' do
-    hazards = HazardService.get_hazards_index
+  it '#get_hazards_index', :vcr do
+    ip = "127.0.0.1"
+    hazards = HazardService.get_hazards_index(ip)
     expect(hazards).to be_a(Array)
-    expect(hazards.size).to eq(3)
+    expect(hazards.size).to eq(4)
     hazard_data = hazards.first
     expect(hazard_data).to have_key(:id)
     expect(hazard_data).to have_key(:type)

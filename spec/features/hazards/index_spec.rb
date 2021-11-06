@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe 'User dashboard page' do
 
   #this test WILL expect far away hazards to not be included, which should be delt with by back end
-  it 'displays list of hazards' do
+  it 'displays list of hazards', :vcr do
     #need code to say user is logged in
     visit dashboard_path
 
@@ -13,7 +13,7 @@ RSpec.describe 'User dashboard page' do
     expect(page).to_not have_content('North Pole, Alaska')
   end
 
-  it 'hazard title links to hazard show page' do
+  it 'hazard title links to hazard show page', :vcr do
     #need code to say user is logged in
     visit dashboard_path
 
@@ -24,7 +24,7 @@ RSpec.describe 'User dashboard page' do
     expect(current_path).to eq('/hazards/1')
   end
 
-  it 'links to new hazard page' do
+  it 'links to new hazard page', :vcr do
     #need code to say user is logged in
     visit dashboard_path
 
@@ -35,7 +35,7 @@ RSpec.describe 'User dashboard page' do
     expect(current_path).to eq(new_hazard_path)
   end
 
-  it 'redirects to root if user is not logged in' do
+  it 'redirects to root if user is not logged in', :vcr do
     #no code to say user is logged in
     visit dashboard_path
 
