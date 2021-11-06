@@ -22,7 +22,7 @@ RSpec.describe 'hazard show page' do
 
     click_on 'Upvote'
 
-    expect(current_path).to eq('/hazard/1')
+    expect(current_path).to eq('/hazards/1')
     expect(page).to have_content('Upvotes: 11')
   end
 
@@ -36,8 +36,8 @@ RSpec.describe 'hazard show page' do
 
     click_on 'Downvote'
 
-    expect(current_path).to eq('/hazard/1')
-    expect(page).to have_content('Downvotes: 1')
+    expect(current_path).to eq('/hazards/1')
+    expect(page).to have_content('Downvotes: 2')
   end
 
   it 'does not see button to delete hazard when not the owner', :vcr do
