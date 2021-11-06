@@ -23,7 +23,7 @@
   <tbody>
     <% @hazards.each do |hazard| %>
       <tr>
-        <td><%= hazard.title %></td>
+        <td><%=link_to "#{hazard.title}", hazard_path(hazard.id) %></td>
         <td><%= hazard.latitude %></td>
         <td><%= hazard.longitude %></td>
       </tr>

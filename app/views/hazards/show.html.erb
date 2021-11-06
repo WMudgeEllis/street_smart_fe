@@ -4,7 +4,7 @@
   <p>Description: <%= @hazard.description %></p>
   <p>Upvotes: <%= @hazard.upvotes %></p>
   <p>Downvotes: <%= @hazard.downvotes %></p>
-
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@hazard.latitude},#{@hazard.longitude}&key=#{ENV['google_maps_api_key']}", alt: "Map" %>
 </section>
 
 
