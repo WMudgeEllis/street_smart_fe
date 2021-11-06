@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 06 Nov 2021 16:44:08 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c15b412e004cadc640b5ef9f9e004690"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d69153a0-4584-4abb-b8d7-1c1e04a907b1
+      X-Runtime:
+      - '0.008175'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
+        Wyoming","description":"Je suis comme je suis","longitude":"41.1400","latitude":"-104.8202","category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_id":"1"}}}'
+  recorded_at: Sat, 06 Nov 2021 16:44:09 GMT
+recorded_with: VCR 6.0.0
