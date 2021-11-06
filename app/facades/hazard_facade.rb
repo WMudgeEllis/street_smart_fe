@@ -5,4 +5,9 @@ class HazardFacade
       Hazard.new(hazard)
     end
   end
+
+  def self.one_hazard(id)
+    data = HazardService.get_one_hazard(id)
+    Hazard.new(data)
+  end
 end
