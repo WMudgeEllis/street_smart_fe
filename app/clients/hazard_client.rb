@@ -5,7 +5,7 @@ class HazardClient
     end
 
     def conn
-      Faraday.new('http://localhost:3000')
+      Faraday.new('https://street-smart-be.herokuapp.com')
     end
 
     def parse_data(response)

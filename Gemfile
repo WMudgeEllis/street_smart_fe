@@ -47,6 +47,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'pry'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :test do
