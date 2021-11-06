@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe 'hazard show page' do
 
-  it 'can display details of the hazard' do
+  it 'can display details of the hazard', :vcr do
     # Need code to authenticate user/log them in as user with id 1
-    visit '/hazard/1'
+    visit '/hazards/1'
 
     expect(page).to have_content("Title: Cheyenne, Wyoming")
     expect(page).to have_content("Description: Je suis comme je suis")
@@ -12,9 +12,9 @@ RSpec.describe 'hazard show page' do
     expect(page).to have_content("Downvotes: 1")
   end
 
-  it 'can upvote the hazard' do
+  it 'can upvote the hazard', :vcr do
     # Need code to authenticate user/log them in as user with id 1
-    visit '/hazard/1'
+    visit '/hazards/1'
 
     expect(page).to have_content('Upvotes: 10')
 
@@ -26,9 +26,9 @@ RSpec.describe 'hazard show page' do
     expect(page).to have_content('Upvotes: 11')
   end
 
-  it 'can downvote the hazard' do
+  it 'can downvote the hazard', :vcr do
     # Need code to authenticate user/log them in as user with id 1
-    visit '/hazard/1'
+    visit '/hazards/1'
 
     expect(page).to have_content('Downvotes: 1')
 
@@ -40,17 +40,17 @@ RSpec.describe 'hazard show page' do
     expect(page).to have_content('Downvotes: 1')
   end
 
-  it 'does not see button to delete hazard when not the owner' do
+  it 'does not see button to delete hazard when not the owner', :vcr do
     #code to log in as NOT user with id 1
-    visit '/hazard/1'
+    visit '/hazards/1'
 
     expect(page).to_not have_button('Delete Hazard')
   end
 
   #test may behave oddly depending on stubing
-  it 'can delete hazard if owner of the hazard' do
+  it 'can delete hazard if owner of the hazard', :vcr do
     # Need code to authenticate user/log them in as user with id 1
-    visit '/hazard/1'
+    visit '/hazards/1'
 
     expect(page).to have_content('Delete Hazard')
 
@@ -60,9 +60,9 @@ RSpec.describe 'hazard show page' do
     expect(page).to_not have_content('Cheyenne, Wyoming')
   end
 
-  it 'cannot vote on the same hazard twice' do
-    # Need code to authenticate user/log them in as user with id 1    
-    visit '/hazard/1'
+  it 'cannot vote on the same hazard twice', :vcr do
+    # Need code to authenticate user/log them in as user with id 1
+    visit '/hazards/1'
 
     click_on 'Upvote'
 
