@@ -10,5 +10,5 @@
 
 <section id="vote">
   <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
-  <%= button_to 'Downvote', vote_path, params: { downvote: true } %>
+  <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
 </section>
