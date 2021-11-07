@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 21:18:01 GMT
+      - Sat, 06 Nov 2021 22:28:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8155032c-edc6-4578-b100-bb037c848f8d
+      - 0a194d13-05ad-4e36-9ca0-47c1ab2c7954
       X-Runtime:
-      - '0.005751'
+      - '0.015060'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
         Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_id":"1"}}}'
-  recorded_at: Sat, 06 Nov 2021 21:18:02 GMT
+  recorded_at: Sat, 06 Nov 2021 22:28:40 GMT
 - request:
     method: put
     uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?upvote=11
@@ -66,7 +66,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 21:18:02 GMT
+      - Sat, 06 Nov 2021 22:28:40 GMT
       Content-Length:
       - '0'
       Connection:
@@ -74,15 +74,15 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - f9cfe83b-0c9c-4353-bc88-898539144508
+      - 168b43f3-24f0-496a-be60-84b89e2a8e1c
       X-Runtime:
-      - '0.014448'
+      - '0.020151'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 06 Nov 2021 21:18:02 GMT
+  recorded_at: Sat, 06 Nov 2021 22:28:41 GMT
 - request:
     method: get
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
@@ -104,7 +104,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 21:18:02 GMT
+      - Sat, 06 Nov 2021 22:28:41 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -114,9 +114,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c2a5ec97-ad86-4195-b07a-720b0c47695a
+      - c9ef993c-1934-4400-bf18-c0dae2be47e4
       X-Runtime:
-      - '0.009907'
+      - '0.009478'
       Transfer-Encoding:
       - chunked
       Via:
@@ -125,5 +125,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
         Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_id":"1"}}}'
-  recorded_at: Sat, 06 Nov 2021 21:18:03 GMT
+  recorded_at: Sat, 06 Nov 2021 22:28:41 GMT
 recorded_with: VCR 6.0.0

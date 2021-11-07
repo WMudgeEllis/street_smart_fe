@@ -10,4 +10,9 @@ class HazardsController < ApplicationController
   def show
     @hazard = HazardFacade.one_hazard(params[:id])
   end
+
+  def destroy
+    HazardService.delete_hazard(params[:id])
+    redirect_to dashboard_path
+  end
 end

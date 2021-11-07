@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 21:18:04 GMT
+      - Sat, 06 Nov 2021 22:28:43 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8a4943b1a3d4ab0f2fdbfb0469ab3f23"
+      - W/"d09db5c32adc3b2eeeca89b52fc83e90"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1918d518-c16d-442f-aeff-3fc7418c3ea1
+      - 5f86f53e-1785-45ac-a16e-7062e85cae39
       X-Runtime:
-      - '0.007051'
+      - '0.016033'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,6 +41,87 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"11","downvote":"2"},"user_id":"1"}}}'
-  recorded_at: Sat, 06 Nov 2021 21:18:04 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"12","downvote":"2"},"user_id":"1"}}}'
+  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
+- request:
+    method: delete
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 06 Nov 2021 22:28:43 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b4698867-510a-46b6-945b-f2719584e9da
+      X-Runtime:
+      - '0.013057'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 06 Nov 2021 22:28:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"54b030db420fa7e625bb856c80d47934"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 67c81f19-09d1-40d9-ac72-a5b8cee6e76a
+      X-Runtime:
+      - '0.026292'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6Ii0xNDcuMzQ5NCIsImxhdGl0dWRlIjoiNjQuNzUxMSIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2lkIjoiMSJ9fSx7ImlkIjoiMyIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiUGFya2luZyBMb3QiLCJkZXNjcmlwdGlvbiI6ImlzIHN1cGVyIHNrZXRjaCIsImxvbmdpdHVkZSI6Ii0xMDQuNzY2Nzc5IiwibGF0aXR1ZGUiOiI0MS4xMzc4NTkiLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9pZCI6IjEifX0seyJpZCI6IjQiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkJpZyAnb2wgcG90aG9sZSIsImRlc2NyaXB0aW9uIjoiTGlrZSBTVVBFUiBiaWciLCJsb25naXR1ZGUiOiItMTA0Ljc3Mjk3MCIsImxhdGl0dWRlIjoiNDEuMTQzMjAwIiwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfaWQiOiIxIn19XX0=
+  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
 recorded_with: VCR 6.0.0

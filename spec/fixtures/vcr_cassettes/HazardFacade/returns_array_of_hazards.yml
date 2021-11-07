@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 06 Nov 2021 22:30:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"54b030db420fa7e625bb856c80d47934"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4553c22e-736d-4651-a99d-d9ea44912ed7
+      X-Runtime:
+      - '0.035341'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6Ii0xNDcuMzQ5NCIsImxhdGl0dWRlIjoiNjQuNzUxMSIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2lkIjoiMSJ9fSx7ImlkIjoiMyIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiUGFya2luZyBMb3QiLCJkZXNjcmlwdGlvbiI6ImlzIHN1cGVyIHNrZXRjaCIsImxvbmdpdHVkZSI6Ii0xMDQuNzY2Nzc5IiwibGF0aXR1ZGUiOiI0MS4xMzc4NTkiLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9pZCI6IjEifX0seyJpZCI6IjQiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkJpZyAnb2wgcG90aG9sZSIsImRlc2NyaXB0aW9uIjoiTGlrZSBTVVBFUiBiaWciLCJsb25naXR1ZGUiOiItMTA0Ljc3Mjk3MCIsImxhdGl0dWRlIjoiNDEuMTQzMjAwIiwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfaWQiOiIxIn19XX0=
+  recorded_at: Sat, 06 Nov 2021 22:30:01 GMT
+recorded_with: VCR 6.0.0
