@@ -6,15 +6,20 @@ Things you may want to cover:
 
 * Ruby version
 
-  ruby
+  ruby 2.7.2, rails 5.2.6
 
-* System dependencies
+* Setup
 
-* Configuration
+  Go ahead and clone the repo down then:
+  
+  ```
+  bundle install
+  
+  rails db:{create, migrate}
 
-* Database creation
-
-* Database initialization
+  bundle exec figaro install
+  
+  ```
 
 * How to run the test suite
 
