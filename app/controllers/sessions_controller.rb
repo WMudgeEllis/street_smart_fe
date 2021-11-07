@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_or_create_by(email: auth_hash['info']['email'], uid: auth_hash['uid'])
     session[:user_id] = user.id
+    UserFacade.create_user(user.email)
     redirect_to '/dashboard'
   end
 
