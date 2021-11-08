@@ -1,5 +1,15 @@
 class Hazard
-  attr_reader :id, :type, :title, :description, :longitude, :latitude, :category, :upvotes, :downvotes, :email
+  attr_reader :id,
+              :type,
+              :title,
+              :description,
+              :longitude,
+              :latitude,
+              :category,
+              :upvotes,
+              :downvotes,
+              :email
+
   def initialize(data)
     @id = data[:id].to_i
     @type = data[:type]

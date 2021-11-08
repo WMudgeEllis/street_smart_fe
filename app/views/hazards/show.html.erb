@@ -5,7 +5,9 @@
   <p>Upvotes: <%= @hazard.upvotes %></p>
   <p>Downvotes: <%= @hazard.downvotes %></p>
   <!-- needs logic to hid if user != hazard owner -->
-  <p><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></p>
+  <% if current_user.email == @hazard.email %>
+    <p><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></p>
+  <% end %>
 </section>
 
 
