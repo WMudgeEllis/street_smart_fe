@@ -1,4 +1,6 @@
 class HazardsController < ApplicationController
+  before_action :require_user
+
   def index
     ip = request.ip
     @hazards= HazardFacade.all_hazards(ip)
