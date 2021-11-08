@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 22:28:43 GMT
+      - Mon, 08 Nov 2021 18:24:07 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d09db5c32adc3b2eeeca89b52fc83e90"
+      - W/"542e1f49fbfe2c44d2ee71515475e70e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5f86f53e-1785-45ac-a16e-7062e85cae39
+      - 12744ef9-1982-488b-9c55-7035f68ec9d3
       X-Runtime:
-      - '0.016033'
+      - '0.008683'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,8 +41,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"12","downvote":"2"},"user_id":"1"}}}'
-  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
 - request:
     method: delete
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
@@ -64,7 +64,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 22:28:43 GMT
+      - Mon, 08 Nov 2021 18:24:07 GMT
       Content-Length:
       - '0'
       Connection:
@@ -72,15 +72,15 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - b4698867-510a-46b6-945b-f2719584e9da
+      - 3b02a592-d2af-4473-a2ed-6f039db09bc0
       X-Runtime:
-      - '0.013057'
+      - '0.012588'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
+  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
 - request:
     method: get
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
@@ -102,19 +102,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 22:28:43 GMT
+      - Mon, 08 Nov 2021 18:24:07 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"54b030db420fa7e625bb856c80d47934"
+      - W/"5e75a933110c0f9dcdace7d1507bb4b6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 67c81f19-09d1-40d9-ac72-a5b8cee6e76a
+      - a18ac718-cc37-457b-806e-69918d1c4426
       X-Runtime:
-      - '0.026292'
+      - '0.014842'
       Transfer-Encoding:
       - chunked
       Via:
@@ -122,6 +122,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6Ii0xNDcuMzQ5NCIsImxhdGl0dWRlIjoiNjQuNzUxMSIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2lkIjoiMSJ9fSx7ImlkIjoiMyIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiUGFya2luZyBMb3QiLCJkZXNjcmlwdGlvbiI6ImlzIHN1cGVyIHNrZXRjaCIsImxvbmdpdHVkZSI6Ii0xMDQuNzY2Nzc5IiwibGF0aXR1ZGUiOiI0MS4xMzc4NTkiLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9pZCI6IjEifX0seyJpZCI6IjQiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkJpZyAnb2wgcG90aG9sZSIsImRlc2NyaXB0aW9uIjoiTGlrZSBTVVBFUiBiaWciLCJsb25naXR1ZGUiOiItMTA0Ljc3Mjk3MCIsImxhdGl0dWRlIjoiNDEuMTQzMjAwIiwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfaWQiOiIxIn19XX0=
-  recorded_at: Sat, 06 Nov 2021 22:28:43 GMT
+        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6LTE0Ny4zNDk0LCJsYXRpdHVkZSI6NjQuNzUxMSwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifX0seyJpZCI6IjMiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IlBhcmtpbmcgTG90IiwiZGVzY3JpcHRpb24iOiJpcyBzdXBlciBza2V0Y2giLCJsb25naXR1ZGUiOi0xMDQuNzY2Nzc5LCJsYXRpdHVkZSI6NDEuMTM3ODU5LCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fSx7ImlkIjoiNCIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiQmlnICdvbCBwb3Rob2xlIiwiZGVzY3JpcHRpb24iOiJMaWtlIFNVUEVSIGJpZyIsImxvbmdpdHVkZSI6LTEwNC43NzI5NywibGF0aXR1ZGUiOjQxLjE0MzIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2VtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn19XX0=
+  recorded_at: Mon, 08 Nov 2021 18:24:08 GMT
 recorded_with: VCR 6.0.0
