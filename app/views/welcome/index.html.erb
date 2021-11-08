@@ -1,0 +1,38 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      var map = initHazardIndexMap(<%= @hazards_coords %>)
+    });
+  </script>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Recent and Closest Hazards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hazards.each do |hazard| %>
+      <tr>
+        <td><%= hazard.title%></td>
+        <td><%= hazard.latitude %></td>
+        <td><%= hazard.longitude %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<p><%= button_to 'Login With Google', '/auth/google_oauth2', method: :get, local: true %></p>
+
+<p><div id="mapHazard"></div></p>
