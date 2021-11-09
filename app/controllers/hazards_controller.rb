@@ -24,7 +24,7 @@ class HazardsController < ApplicationController
 
   def create
     response = HazardService.create_hazard(hazard_params)
-    if response.status == 200
+    if response[:type] == 'hazard'
       redirect_to dashboard_path
       flash[:success] = 'Hazard Recorded'
     end
@@ -33,6 +33,6 @@ class HazardsController < ApplicationController
   private
 
   def hazard_params
-    params.permit(:title, :description, :latitude, :longitude).merge({ user_id: current_user.email, category: 'animate' })
+    params.permit(:title, :description, :latitude, :longitude, :category).merge({ user_id: 1 })
   end
 end
