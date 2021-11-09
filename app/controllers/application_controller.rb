@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def login_redirect
+    redirect_to dashboard_path if current_user
+  end
 end
