@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  before_action :login_redirect
+
   def index
     ip = request.ip
     @hazards= HazardFacade.all_hazards(ip)
