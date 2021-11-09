@@ -36,7 +36,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faraday'
 gem 'omniauth-google-oauth2'
-gem 'bootstrap'
 gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
