@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 21:18:04 GMT
+      - Mon, 08 Nov 2021 18:24:07 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8a4943b1a3d4ab0f2fdbfb0469ab3f23"
+      - W/"542e1f49fbfe2c44d2ee71515475e70e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1918d518-c16d-442f-aeff-3fc7418c3ea1
+      - 12744ef9-1982-488b-9c55-7035f68ec9d3
       X-Runtime:
-      - '0.007051'
+      - '0.008683'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,6 +41,87 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":"-104.8202","latitude":"41.1400","category":"inanimate","vote_data":{"upvote":"11","downvote":"2"},"user_id":"1"}}}'
-  recorded_at: Sat, 06 Nov 2021 21:18:04 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
+- request:
+    method: delete
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 08 Nov 2021 18:24:07 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3b02a592-d2af-4473-a2ed-6f039db09bc0
+      X-Runtime:
+      - '0.012588'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 08 Nov 2021 18:24:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5e75a933110c0f9dcdace7d1507bb4b6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a18ac718-cc37-457b-806e-69918d1c4426
+      X-Runtime:
+      - '0.014842'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6LTE0Ny4zNDk0LCJsYXRpdHVkZSI6NjQuNzUxMSwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifX0seyJpZCI6IjMiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IlBhcmtpbmcgTG90IiwiZGVzY3JpcHRpb24iOiJpcyBzdXBlciBza2V0Y2giLCJsb25naXR1ZGUiOi0xMDQuNzY2Nzc5LCJsYXRpdHVkZSI6NDEuMTM3ODU5LCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fSx7ImlkIjoiNCIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiQmlnICdvbCBwb3Rob2xlIiwiZGVzY3JpcHRpb24iOiJMaWtlIFNVUEVSIGJpZyIsImxvbmdpdHVkZSI6LTEwNC43NzI5NywibGF0aXR1ZGUiOjQxLjE0MzIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2VtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn19XX0=
+  recorded_at: Mon, 08 Nov 2021 18:24:08 GMT
 recorded_with: VCR 6.0.0

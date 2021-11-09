@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 18:23:57 GMT
+      - Mon, 08 Nov 2021 23:38:45 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"542e1f49fbfe2c44d2ee71515475e70e"
+      - W/"a2cd4028c5382c3e8f969e500da3aa24"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eef20381-f96d-4dbe-ae77-e7179738f309
+      - 87303b08-35b5-4199-8a09-a2a031c6f477
       X-Runtime:
-      - '0.008026'
+      - '0.007334'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,6 +41,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Mon, 08 Nov 2021 18:23:57 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"2"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Mon, 08 Nov 2021 23:38:45 GMT
 recorded_with: VCR 6.0.0

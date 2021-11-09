@@ -1,4 +1,4 @@
-class HazardClient
+class Client
   class << self
     def get_data(endpoint)
       parse_data(conn.get(endpoint))
