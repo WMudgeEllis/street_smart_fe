@@ -22,7 +22,8 @@ This is the front end to the street smart project. It is currently deployed on h
   
 * Authorization for API usage
   
-  For successful local deployment, you will need to acquire credentials for Google OAuth2. More information can be found [here](https://developers.google.com/identity/protocols/oauth2)
+  - For successful local deployment, you will need to acquire credentials for Google OAuth2. More information can be found [here](https://developers.google.com/identity/protocols/oauth2)
+  - This application also requires authorization for the GoogleMaps JavaScript API. More information can be found [here](https://developers.google.com/maps/documentation/javascript/overview)
 
 
 * How to run the test suite
