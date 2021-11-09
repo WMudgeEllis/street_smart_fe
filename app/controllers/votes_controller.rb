@@ -1,7 +1,8 @@
 class VotesController < ApplicationController
 
   def update
-    VoteFacade.vote(params)
+    email = current_user.email
+    VoteFacade.vote(params, email)
     redirect_to "/hazards/#{params[:id]}"
   end
 end
