@@ -18,6 +18,7 @@ class Hazard
     @longitude = data[:attributes][:longitude]
     @latitude = data[:attributes][:latitude]
     @category = data[:attributes][:category]
+    @user_id = data[:attributes][:user_id].to_i
     @downvotes = data[:attributes][:vote_data][:downvote].to_i
     @upvotes = data[:attributes][:vote_data][:upvote].to_i
     @email = data[:attributes][:user_email]

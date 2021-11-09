@@ -28,10 +28,12 @@
 
     </div>
     <div class="col">
-
+      <div id="map">
       <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@hazard.latitude},#{@hazard.longitude}&key=#{ENV['google_maps_api_key']}", alt: "Map", size: '600x400' %>
+      </div>  
     </div>
     <div class="col">
     </div>
   </div>
 </div>
+

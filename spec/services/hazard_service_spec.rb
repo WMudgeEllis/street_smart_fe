@@ -40,6 +40,33 @@ RSpec.describe HazardService do
     expect(hazard[:attributes][:vote_data]).to have_key(:downvote)
   end
 
+  it '#create_hazard', :vcr do
+    body_data = {
+      title: "dogman",
+      description: "my dad stole a watch",
+      category: "animate",
+      latitude: 39.380902,
+      longitude: -119.685945,
+      user_id: 1
+    }
+    response = HazardService.create_hazard(body_data)
+    hazard = response[:data]
+
+    expect(hazard).to be_a(Hash)
+    expect(hazard).to have_key(:id)
+    expect(hazard).to have_key(:type)
+    expect(hazard).to have_key(:attributes)
+    expect(hazard[:attributes]).to have_key(:title)
+    expect(hazard[:attributes]).to have_key(:description)
+    expect(hazard[:attributes]).to have_key(:longitude)
+    expect(hazard[:attributes]).to have_key(:latitude)
+    expect(hazard[:attributes]).to have_key(:category)
+    expect(hazard[:attributes]).to have_key(:user_email)
+    expect(hazard[:attributes]).to have_key(:vote_data)
+    expect(hazard[:attributes][:vote_data]).to have_key(:upvote)
+    expect(hazard[:attributes][:vote_data]).to have_key(:downvote)
+  end
+
 
 
 end
