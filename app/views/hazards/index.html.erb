@@ -9,30 +9,42 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Hazards</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-  </thead>
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">
+    <h1>Hazards</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @hazards.each do |hazard| %>
-      <tr>
-        <td><%=link_to "#{hazard.title}", hazard_path(hazard.id) %></td>
-        <td><%= hazard.latitude %></td>
-        <td><%= hazard.longitude %></td>
-      </tr>
+      <tbody>
+        <% @hazards.each do |hazard| %>
+        <tr>
+          <td><%=link_to "#{hazard.title}", hazard_path(hazard.id) %></td>
+          <td><%= hazard.latitude %></td>
+          <td><%= hazard.longitude %></td>
+        </tr>
 
-    <% end %>
-  </tbody>
-</table>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+    <div class="col"></div>
+    <div class="col">
+      <%= button_to 'Report a Hazard', new_hazard_path, method: :get %><br>
+      <div id="mapHazard"></div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+
+
 <br>
-
-<%= button_to 'Report a Hazard', new_hazard_path, method: :get %>
-
-<p><div id="mapHazard"></div></p>
