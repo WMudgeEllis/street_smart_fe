@@ -1,0 +1,42 @@
+<% provide :head_tags do %>
+    <meta name='turbolinks-visit-control' content='reload'>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        initHazardMap2(41.1400,-104.8202)
+      });
+    </script>
+<% end %>
+
+<%= form_with url: hazards_path, method: :post, local: true do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.select :category, [["Animate", 1], ["Inanimate", 0]] %>
+  </div>
+
+  <p>
+    <div id="mapHazard2"></div>
+  </p>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
