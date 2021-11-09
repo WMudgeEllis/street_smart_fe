@@ -9,30 +9,48 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Recent and Closest Hazards</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @hazards.each do |hazard| %>
-      <tr>
-        <td><%= hazard.title%></td>
-        <td><%= hazard.latitude %></td>
-        <td><%= hazard.longitude %></td>
-      </tr>
+<div class="container">
+  <figure class="text-center">
 
-    <% end %>
-  </tbody>
-</table>
-<br>
+    <p>Welcome to Street Smart! This is an app that allows you to report hazards that you see in your neighborhood as well as view and vote on hazards that others have reported. In order to report a hazard, please log in! </p>
+  </figure>
 
-<p><%= button_to 'Login With Google', '/auth/google_oauth2', method: :get, local: true %></p>
+</div>
 
-<p><div id="mapHazard"></div></p>
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">
+    <h1>Recent and Closest Hazards</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @hazards.each do |hazard| %>
+        <tr>
+          <td><%= hazard.title %></td>
+          <td><%= hazard.latitude %></td>
+          <td><%= hazard.longitude %></td>
+        </tr>
+
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+    <div class="col"></div>
+    <div class="col">
+      <%= button_to 'Report a Hazard', new_hazard_path, method: :get %>
+      <%= button_to 'Login With Google', '/auth/google_oauth2', method: :get, local: true %> <br>
+      <div id="mapHazard"></div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

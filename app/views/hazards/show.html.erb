@@ -1,18 +1,37 @@
 
-<section id="hazard-info">
-  <p>Title: <%= @hazard.title %></p>
-  <p>Description: <%= @hazard.description %></p>
-  <p>Upvotes: <%= @hazard.upvotes %></p>
-  <p>Downvotes: <%= @hazard.downvotes %></p>
-  <% if current_user.email == @hazard.email %>
-    <p><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></p>
-  <% end %>
-</section>
 
 
-<section id="vote">
-  <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
-  <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
-</section>
 
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@hazard.latitude},#{@hazard.longitude}&key=#{ENV['google_maps_api_key']}", alt: "Map" %>
+
+
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">
+      <section id="hazard-info">
+      <h3>Hazard Details</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Title: <%= @hazard.title %></li>
+          <li class="list-group-item">Description: <%= @hazard.description %></li>
+          <li class="list-group-item">Upvotes: <%= @hazard.upvotes %></li>
+          <li class="list-group-item">Downvotes: <%= @hazard.downvotes %></li>
+          <% if current_user.email == @hazard.email %>
+          <li><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+    <div class="col">
+      <section id="vote">
+        <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
+        <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
+      </section>
+
+    </div>
+    <div class="col">
+
+      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@hazard.latitude},#{@hazard.longitude}&key=#{ENV['google_maps_api_key']}", alt: "Map", size: '600x400' %>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
