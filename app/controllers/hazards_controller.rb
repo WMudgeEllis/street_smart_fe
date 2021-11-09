@@ -1,4 +1,6 @@
 class HazardsController < ApplicationController
+  before_action :require_user
+
   def index
     ip = request.ip
     @hazards= HazardFacade.all_hazards(ip)
@@ -9,5 +11,10 @@ class HazardsController < ApplicationController
 
   def show
     @hazard = HazardFacade.one_hazard(params[:id])
+  end
+
+  def destroy
+    HazardService.delete_hazard(params[:id])
+    redirect_to dashboard_path
   end
 end

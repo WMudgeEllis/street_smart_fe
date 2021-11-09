@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?upvote=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 06 Nov 2021 22:30:04 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 77a24801-ced4-4ce1-b628-40142a42ce5d
+      X-Runtime:
+      - '0.012999'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 06 Nov 2021 22:30:05 GMT
+recorded_with: VCR 6.0.0

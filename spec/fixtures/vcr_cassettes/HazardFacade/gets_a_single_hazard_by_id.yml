@@ -15,32 +15,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 18:23:57 GMT
+      - Sat, 06 Nov 2021 22:30:01 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"542e1f49fbfe2c44d2ee71515475e70e"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - eef20381-f96d-4dbe-ae77-e7179738f309
+      - 3b641109-a115-4702-ba11-f9797c385f7d
       X-Runtime:
-      - '0.008026'
+      - '0.010935'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Mon, 08 Nov 2021 18:23:57 GMT
+      string: '404'
+  recorded_at: Sat, 06 Nov 2021 22:30:01 GMT
 recorded_with: VCR 6.0.0

@@ -9,4 +9,8 @@ class HazardService
     results[:data]
   end
 
+
+  def self.delete_hazard(id)
+    HazardClient.conn.delete("/api/v1/hazards/#{id}")
+  end
 end
