@@ -17,4 +17,8 @@ class HazardsController < ApplicationController
     HazardService.delete_hazard(params[:id])
     redirect_to dashboard_path
   end
+
+  def new
+
+  end
 end
