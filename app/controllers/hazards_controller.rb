@@ -24,9 +24,9 @@ class HazardsController < ApplicationController
 
   def create
     response = HazardService.create_hazard(hazard_params)
-    if response[:type] == 'hazard'
-      redirect_to dashboard_path
+    if response[:data][:type] == 'hazard'
       flash[:success] = 'Hazard Recorded'
+      redirect_to dashboard_path
     end
   end
 
