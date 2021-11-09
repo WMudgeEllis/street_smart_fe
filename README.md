@@ -1,25 +1,29 @@
-# README
+# Street Smart Front End Application
 
 This is the front end to the street smart project. It is currently deployed on heroku [here](https://street-smart-fe.herokuapp.com/). This application is designed to allow users to add hazards that they see when out and about. Other users are then able to see the placed hazards.
 
-Things you may want to cover:
+* Ruby/Rails versions
 
-* Ruby version
+  - ruby 2.7.2 
+  - rails 5.2.6
 
-  ruby 2.7.2, rails 5.2.6
-
-* Setup
-
-  Go ahead and clone the repo down then:
+* Instructions for local deployment
   
   ```
-  bundle install
+  git clone git@github.com:WMudgeEllis/street_smart_fe.git
+  
+  bundle install 
   
   rails db:{create, migrate}
 
   bundle exec figaro install
   
   ```
+  
+* Authorization for API usage
+  
+  For successful local deployment, you will need to acquire credentials for Google OAuth2. More information can be found [here](https://developers.google.com/identity/protocols/oauth2)
+
 
 * How to run the test suite
 
