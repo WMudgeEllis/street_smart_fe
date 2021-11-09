@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?upvote=10&user_email=admin@admin.com
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=10&user_email=admin@admin.com
     body:
       encoding: UTF-8
       string: ''
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c4483049-92fc-416a-b4a1-606fa6953c8c
+      - 983aa294-a779-4c08-a0c1-655636e8e1c9
       X-Runtime:
-      - '0.007882'
+      - '0.009892'
       Via:
       - 1.1 vegur
     body:
