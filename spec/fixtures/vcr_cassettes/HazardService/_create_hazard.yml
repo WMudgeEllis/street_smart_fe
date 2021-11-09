@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards
+    body:
+      encoding: UTF-8
+      string: category=animate&description=my+dad+stole+a+watch&latitude=39.380902&longitude=-119.685945&title=dogman&user_id=1
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 09 Nov 2021 18:18:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6719f54ec72f714fc1a53f194e74c1be"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a7b0636-3b5c-4223-bbf8-44cdd7b2262e
+      X-Runtime:
+      - '0.019596'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"hazard","attributes":{"title":"dogman","description":"my
+        dad stole a watch","longitude":-119.685945,"latitude":39.380902,"category":"animate","vote_data":{"upvote":"0","downvote":"0"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Tue, 09 Nov 2021 18:18:11 GMT
+recorded_with: VCR 6.0.0
