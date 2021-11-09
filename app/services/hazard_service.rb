@@ -9,8 +9,12 @@ class HazardService
     results[:data]
   end
 
-
   def self.delete_hazard(id)
     Client.conn.delete("/api/v1/hazards/#{id}")
+  end
+
+  def self.create_hazard(params)
+    results = Client.conn.post('/api/v1/hazards', params)
+    Client.parse_data(results)
   end
 end
