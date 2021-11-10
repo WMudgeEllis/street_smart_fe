@@ -3,6 +3,9 @@ class HazardsController < ApplicationController
 
   def index
     ip = request.ip
+    if request.ip == "::1" || request.ip == "127.0.0.1"
+      ip = '13.71.196.84'
+    end
     @hazards= HazardFacade.all_hazards(ip)
     @hazards_coords = @hazards.map do |hazard|
       [hazard.latitude.to_f, hazard.longitude.to_f, hazard.id]
@@ -21,7 +24,7 @@ class HazardsController < ApplicationController
   def new
     ip = request.ip
     if request.ip == "::1" || request.ip == "127.0.0.1"
-      ip = '73.95.222.170'
+      ip = '13.71.196.84'
     end
     @user_coords = Geocoder.search(ip).first.coordinates
   end
