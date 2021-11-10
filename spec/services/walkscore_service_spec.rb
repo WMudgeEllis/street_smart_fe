@@ -8,6 +8,5 @@ RSpec.describe WalkScoreService do
     expect(walkscore[:data]).to have_key(:attributes)
     expect(walkscore[:data][:attributes]).to have_key(:score)
     expect(walkscore[:data][:attributes]).to have_key(:description)
-    binding.pry
   end
 end

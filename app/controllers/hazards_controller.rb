@@ -3,16 +3,23 @@ class HazardsController < ApplicationController
 
   def index
     ip = request.ip
-    @hazards= HazardFacade.all_hazards(ip)
+    if ip == "::1" || ip == "127.0.0.1"
+      ip = '13.71.196.84'
+    end
+    @hazards = HazardFacade.all_hazards(ip)
     @hazards_coords = @hazards.map do |hazard|
       [hazard.latitude.to_f, hazard.longitude.to_f, hazard.id]
     end
-    @walkscore = WalkScoreFacade.walk_score(params[:ip])
+    @walkscore = WalkScoreFacade.walk_score(ip)
   end
 
   def show
+    ip = request.ip
+    if ip == "::1" || ip == "127.0.0.1"
+      ip = '13.71.196.84'
+    end
     @hazard = HazardFacade.one_hazard(params[:id])
-    @walkscore = WalkScoreFacade.walk_score(params[:ip])
+    @walkscore = WalkScoreFacade.walk_score(ip)
   end
 
   def destroy
