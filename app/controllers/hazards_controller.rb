@@ -39,6 +39,6 @@ class HazardsController < ApplicationController
   private
 
   def hazard_params
-    params.permit(:title, :description, :latitude, :longitude, :category).merge({ user_id: 1 })
+    params.permit(:title, :description, :latitude, :longitude, :category).merge({ user_email: current_user.email })
   end
 end

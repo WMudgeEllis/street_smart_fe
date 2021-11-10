@@ -5,6 +5,3 @@ class WalkScoreService
     end
   end
 end
-
-
-# addition of a prefered stimulus in order to increase the occurance of a behavior
