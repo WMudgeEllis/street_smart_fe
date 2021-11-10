@@ -1,9 +1,4 @@
 
-
-
-
-
-
 <div class="container">
   <div class="row row-cols-4">
     <div class="col">
@@ -18,22 +13,23 @@
           <li><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></li>
           <% end %>
         </ul>
+        <section id="vote">
+          <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
+          <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
+        </section>
       </section>
     </div>
     <div class="col">
-      <section id="vote">
-        <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
-        <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
-      </section>
 
     </div>
     <div class="col">
       <div id="map">
       <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@hazard.latitude},#{@hazard.longitude}&key=#{ENV['google_maps_api_key']}", alt: "Map", size: '600x400' %>
-      </div>  
+      </div>
     </div>
     <div class="col">
     </div>
   </div>
 </div>
 
+<%= link_to 'Back', dashboard_path %>

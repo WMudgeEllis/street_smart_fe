@@ -7,36 +7,52 @@
     </script>
 <% end %>
 
-<%= form_with url: hazards_path, method: :post, local: true do |form| %>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+<div class="container">
+    <div class="row row-cols-4">
+      <div class="col">
+        <%= form_with url: hazards_path, method: :post, local: true do |form| %>
+        <h1>New Hazard</h1>
+        <div class="field">
+          <%= form.label :title %>
+          <%= form.text_field :title %>
+        </div>
+        <div class="field">
+          <%= form.label :description %>
+          <%= form.text_field :description %>
+        </div>
 
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude %>
-  </div>
+        <div class="field">
+          <%= form.label :latitude %>
+          <%= form.text_field :latitude %>
+        </div>
 
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude %>
-  </div>
+        <div class="field">
+          <%= form.label :longitude %>
+          <%= form.text_field :longitude %>
+        </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select :category, [["Animate", "animate"], ["Inanimate", "inanimate"]] %>
-  </div>
+        <div class="field">
+          <%= form.label :category %>
+          <%= form.select :category, [["Animate", "animate"], ["Inanimate", "inanimate"]] %>
+        </div>
 
-  <p>
-    <div id="mapHazard2"></div>
-  </p>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      </div>
+      <div class="col">
+
+      </div>
+      <div class="col">
+        <div id="mapHazard2"></div>
+
+      </div>
+      <div class="col">
+
+
+
+      </div>
+    </div>
+  <% end %>
+</div>
