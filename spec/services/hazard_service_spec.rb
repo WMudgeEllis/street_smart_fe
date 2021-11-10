@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe HazardService do
   it '#get_hazards_index', :vcr do
-    ip = "127.0.0.1"
+    ip = "13.71.196.84"
     hazards = HazardService.get_hazards_index(ip)
     expect(hazards).to be_a(Array)
-    expect(hazards.size).to eq(4)
+    expect(hazards.size).to eq(3)
     hazard_data = hazards.first
     expect(hazard_data).to have_key(:id)
     expect(hazard_data).to have_key(:type)
@@ -15,7 +15,7 @@ RSpec.describe HazardService do
     expect(hazard_data[:attributes]).to have_key(:longitude)
     expect(hazard_data[:attributes]).to have_key(:latitude)
     expect(hazard_data[:attributes]).to have_key(:category)
-    expect(hazard_data[:attributes]).to have_key(:user_id)
+    expect(hazard_data[:attributes]).to have_key(:user_email)
     expect(hazard_data[:attributes]).to have_key(:vote_data)
     expect(hazard_data[:attributes][:vote_data]).to have_key(:upvote)
     expect(hazard_data[:attributes][:vote_data]).to have_key(:downvote)
@@ -34,7 +34,7 @@ RSpec.describe HazardService do
     expect(hazard[:attributes]).to have_key(:longitude)
     expect(hazard[:attributes]).to have_key(:latitude)
     expect(hazard[:attributes]).to have_key(:category)
-    expect(hazard[:attributes]).to have_key(:user_id)
+    expect(hazard[:attributes]).to have_key(:user_email)
     expect(hazard[:attributes]).to have_key(:vote_data)
     expect(hazard[:attributes][:vote_data]).to have_key(:upvote)
     expect(hazard[:attributes][:vote_data]).to have_key(:downvote)

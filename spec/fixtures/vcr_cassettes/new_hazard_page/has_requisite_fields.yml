@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/13.71.196.84/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 10 Nov 2021 17:51:34 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '3'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "13.71.196.84",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.2191,-104.6612",
+          "org": "AS8075 Microsoft Corporation",
+          "postal": "82003",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Wed, 10 Nov 2021 17:51:34 GMT
+recorded_with: VCR 6.0.0

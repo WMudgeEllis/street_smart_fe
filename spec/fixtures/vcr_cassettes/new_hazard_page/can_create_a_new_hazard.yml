@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/13.71.196.84/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 10 Nov 2021 17:51:55 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '3'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "13.71.196.84",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.2191,-104.6612",
+          "org": "AS8075 Microsoft Corporation",
+          "postal": "82003",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Wed, 10 Nov 2021 17:51:55 GMT
+- request:
+    method: post
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards
+    body:
+      encoding: UTF-8
+      string: category=inanimate&description=There+is+a+hidden+basement%2C+beware&latitude=39.7392&longitude=-104.9847&title=Capitol+Building&user_id=1
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 10 Nov 2021 17:51:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"aaadf92b52f80bbf1b52f5800cd100b6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d795c198-ca16-4384-ba23-563418761f88
+      X-Runtime:
+      - '0.014697'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"hazard","attributes":{"title":"Capitol Building","description":"There
+        is a hidden basement, beware","longitude":-104.9847,"latitude":39.7392,"category":"inanimate","vote_data":{"upvote":"0","downvote":"0"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Wed, 10 Nov 2021 17:51:56 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=13.71.196.84
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 10 Nov 2021 17:51:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b3a1cb2ca3ef07d64fa658e82e0cfe14"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b89c6a27-b6f9-43cd-9043-88232b3e5910
+      X-Runtime:
+      - '0.058094'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"3","type":"hazard","attributes":{"title":"Parking
+        Lot","description":"is super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"4","type":"hazard","attributes":{"title":"Big
+        ''ol pothole","description":"Like SUPER big","longitude":-104.77297,"latitude":41.1432,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}]}'
+  recorded_at: Wed, 10 Nov 2021 17:51:56 GMT
+recorded_with: VCR 6.0.0

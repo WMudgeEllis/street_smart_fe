@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=10&user_email=admin@admin.com
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=10&email=admin@admin.com
     body:
       encoding: UTF-8
       string: ''
@@ -17,27 +17,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 204
-      message: No Content
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:44:40 GMT
-      Content-Length:
-      - '0'
+      - Wed, 10 Nov 2021 18:24:05 GMT
       Connection:
       - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 983aa294-a779-4c08-a0c1-655636e8e1c9
+      - f0dccb27-e72b-43f8-ae61-5ee70d0a5549
       X-Runtime:
-      - '0.009892'
+      - '0.006688'
+      Transfer-Encoding:
+      - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: ''
-  recorded_at: Tue, 09 Nov 2021 17:44:40 GMT
+      string: '404'
+  recorded_at: Wed, 10 Nov 2021 18:24:06 GMT
 recorded_with: VCR 6.0.0

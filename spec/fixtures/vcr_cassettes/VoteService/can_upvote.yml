@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?upvote=10&user_email=admin@admin.com
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?email=admin@admin.com&upvote=10
     body:
       encoding: UTF-8
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:44:40 GMT
+      - Wed, 10 Nov 2021 18:24:05 GMT
       Content-Length:
       - '0'
       Connection:
@@ -31,13 +31,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c4483049-92fc-416a-b4a1-606fa6953c8c
+      - 91d7294c-750f-40eb-a35e-45d8be547c34
       X-Runtime:
-      - '0.007882'
+      - '0.022796'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 09 Nov 2021 17:44:40 GMT
+  recorded_at: Wed, 10 Nov 2021 18:24:06 GMT
 recorded_with: VCR 6.0.0

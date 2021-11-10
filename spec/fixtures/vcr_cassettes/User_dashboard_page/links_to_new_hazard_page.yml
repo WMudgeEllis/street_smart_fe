@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=13.71.196.84
     body:
       encoding: US-ASCII
       string: ''
@@ -21,26 +21,83 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 06 Nov 2021 22:30:02 GMT
+      - Wed, 10 Nov 2021 17:51:17 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"65f5bdd6e77b37c6000ce20bda0d4bcd"
+      - W/"b3a1cb2ca3ef07d64fa658e82e0cfe14"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - de2d8039-053e-458e-9910-be44e91a3906
+      - f1246e90-00ee-4311-83a6-6e02fd575d38
       X-Runtime:
-      - '0.034289'
+      - '0.058783'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"3","type":"hazard","attributes":{"title":"Parking
+        Lot","description":"is super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"4","type":"hazard","attributes":{"title":"Big
+        ''ol pothole","description":"Like SUPER big","longitude":-104.77297,"latitude":41.1432,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}]}'
+  recorded_at: Wed, 10 Nov 2021 17:51:18 GMT
+- request:
+    method: get
+    uri: http://ipinfo.io/13.71.196.84/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 10 Nov 2021 17:51:18 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjEiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkNoZXllbm5lLCBXeW9taW5nIiwiZGVzY3JpcHRpb24iOiJKZSBzdWlzIGNvbW1lIGplIHN1aXMiLCJsb25naXR1ZGUiOiItMTA0LjgyMDIiLCJsYXRpdHVkZSI6IjQxLjE0MDAiLCJjYXRlZ29yeSI6ImluYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2lkIjoiMSJ9fSx7ImlkIjoiMiIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiTm9ydGggUG9sZSwgQWxhc2thIiwiZGVzY3JpcHRpb24iOiJKZSBzdWlzIGZhaXQgY29tbWUgw6dhIiwibG9uZ2l0dWRlIjoiLTE0Ny4zNDk0IiwibGF0aXR1ZGUiOiI2NC43NTExIiwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfaWQiOiIxIn19LHsiaWQiOiIzIiwidHlwZSI6ImhhemFyZCIsImF0dHJpYnV0ZXMiOnsidGl0bGUiOiJQYXJraW5nIExvdCIsImRlc2NyaXB0aW9uIjoiaXMgc3VwZXIgc2tldGNoIiwibG9uZ2l0dWRlIjoiLTEwNC43NjY3NzkiLCJsYXRpdHVkZSI6IjQxLjEzNzg1OSIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2lkIjoiMSJ9fSx7ImlkIjoiNCIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiQmlnICdvbCBwb3Rob2xlIiwiZGVzY3JpcHRpb24iOiJMaWtlIFNVUEVSIGJpZyIsImxvbmdpdHVkZSI6Ii0xMDQuNzcyOTcwIiwibGF0aXR1ZGUiOiI0MS4xNDMyMDAiLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9pZCI6IjEifX1dfQ==
-  recorded_at: Sat, 06 Nov 2021 22:30:03 GMT
+      string: |-
+        {
+          "ip": "13.71.196.84",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.2191,-104.6612",
+          "org": "AS8075 Microsoft Corporation",
+          "postal": "82003",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Wed, 10 Nov 2021 17:51:18 GMT
 recorded_with: VCR 6.0.0

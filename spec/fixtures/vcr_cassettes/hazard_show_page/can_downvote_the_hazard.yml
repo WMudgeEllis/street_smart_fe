@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:57 GMT
+      - Wed, 10 Nov 2021 18:21:45 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"542e1f49fbfe2c44d2ee71515475e70e"
+      - W/"2eb70696f3e9db2da733bd41c055beef"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d22e0db2-7394-400e-8827-cafb9c865e80
+      - a35547bf-d04a-4ecb-9eb8-a6983035ba69
       X-Runtime:
-      - '0.006269'
+      - '0.006999'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,11 +41,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Wed, 10 Nov 2021 18:21:46 GMT
 - request:
     method: put
-    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=2&user_email=admin@admin.com
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=2&email=admin@admin.com
     body:
       encoding: UTF-8
       string: ''
@@ -66,7 +66,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:58 GMT
+      - Wed, 10 Nov 2021 18:21:46 GMT
       Content-Length:
       - '0'
       Connection:
@@ -74,15 +74,15 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - fe064276-9bb2-40e2-a13d-b53dc01204ab
+      - 1b1419da-8f8f-4550-938d-c60fcf710f54
       X-Runtime:
-      - '0.010722'
+      - '0.034992'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+  recorded_at: Wed, 10 Nov 2021 18:21:46 GMT
 - request:
     method: get
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
@@ -104,19 +104,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:58 GMT
+      - Wed, 10 Nov 2021 18:21:46 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bb17d95331beca419e9bf788773dc668"
+      - W/"a2cd4028c5382c3e8f969e500da3aa24"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6604562-d901-47a6-b188-f57cafed537c
+      - 55d69d67-0481-4b5d-bf49-644711a51d5b
       X-Runtime:
-      - '0.006277'
+      - '0.008047'
       Transfer-Encoding:
       - chunked
       Via:
@@ -124,6 +124,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"2"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:59 GMT
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"2"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Wed, 10 Nov 2021 18:21:47 GMT
 recorded_with: VCR 6.0.0
