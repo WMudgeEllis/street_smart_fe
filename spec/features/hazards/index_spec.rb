@@ -2,20 +2,18 @@ require "rails_helper"
 
 RSpec.describe 'User dashboard page' do
 
-  #this test WILL expect far away hazards to not be included, which should be delt with by back end
   before :each do
     @user = User.create(email: 'admin@admin.com')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
 
   it 'displays list of hazards', :vcr do
-    #need code to say user is logged in
     visit dashboard_path
 
     expect(page).to have_content('Cheyenne, Wyoming')
     expect(page).to have_content('Parking Lot')
     expect(page).to have_content("Big 'ol pothole")
-    expect(page).to have_content('North Pole, Alaska')
+    expect(page).to_not have_content('North Pole, Alaska')
   end
 
   it 'hazard title links to hazard show page', :vcr do
