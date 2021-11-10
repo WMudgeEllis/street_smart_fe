@@ -7,10 +7,12 @@ class HazardsController < ApplicationController
     @hazards_coords = @hazards.map do |hazard|
       [hazard.latitude.to_f, hazard.longitude.to_f, hazard.id]
     end
+    @walkscore = WalkScoreFacade.walk_score(ip)
   end
 
   def show
     @hazard = HazardFacade.one_hazard(params[:id])
+    @walkscore = WalkScoreFacade.walk_score(ip)
   end
 
   def destroy

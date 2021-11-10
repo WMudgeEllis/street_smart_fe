@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.36.122.136
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 10 Nov 2021 01:59:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ae80ec48647d47f0f15489623d87ed6f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0fc7fa2b-490c-4db2-a581-9df681568312
+      X-Runtime:
+      - '0.499002'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":null,"description":null}}}'
+  recorded_at: Wed, 10 Nov 2021 01:59:28 GMT
+recorded_with: VCR 6.0.0
