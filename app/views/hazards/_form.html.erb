@@ -2,7 +2,7 @@
     <meta name='turbolinks-visit-control' content='reload'>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        initHazardMap2(41.1400,-104.8202)
+        initHazardMap2(<%= @user_coords[0] %>,<%= @user_coords[1] %>)
       });
     </script>
 <% end %>

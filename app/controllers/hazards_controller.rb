@@ -19,7 +19,11 @@ class HazardsController < ApplicationController
   end
 
   def new
-
+    ip = request.ip
+    if request.ip == "::1" || request.ip == "127.0.0.1"
+      ip = '73.95.222.170'
+    end
+    @user_coords = Geocoder.search(ip).first.coordinates
   end
 
   def create
