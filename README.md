@@ -29,8 +29,6 @@ This is the front end to the street smart project. It is currently deployed on h
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rspec
+```
