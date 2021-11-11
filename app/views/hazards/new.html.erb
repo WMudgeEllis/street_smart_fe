@@ -1,4 +1,5 @@
-
-<%= link_to 'Back', dashboard_path %>
+<%= render 'navbar' %>
 
 <%= render 'form', hazard: @hazard %>
+<br>
+<%= link_to 'Back to Dashboard', dashboard_path %>
