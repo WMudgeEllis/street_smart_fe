@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=47.28.194.109
     body:
       encoding: US-ASCII
       string: ''
@@ -21,26 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 23:41:05 GMT
+      - Thu, 11 Nov 2021 17:38:48 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"588dc88262277b644427faab3776495c"
+      - W/"c42f9c47299cdaa63343f340fe8a1ecd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 756bc64a-cde4-43f6-b8ed-d45d267ef180
+      - e666b8d6-4343-4510-9d50-1ff304bab2b3
       X-Runtime:
-      - '0.016224'
+      - '0.074286'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjEiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkNoZXllbm5lLCBXeW9taW5nIiwiZGVzY3JpcHRpb24iOiJKZSBzdWlzIGNvbW1lIGplIHN1aXMiLCJsb25naXR1ZGUiOi0xMDQuODIwMiwibGF0aXR1ZGUiOjQxLjE0LCJjYXRlZ29yeSI6ImluYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMiJ9LCJ1c2VyX2VtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn19LHsiaWQiOiIyIiwidHlwZSI6ImhhemFyZCIsImF0dHJpYnV0ZXMiOnsidGl0bGUiOiJOb3J0aCBQb2xlLCBBbGFza2EiLCJkZXNjcmlwdGlvbiI6IkplIHN1aXMgZmFpdCBjb21tZSDDp2EiLCJsb25naXR1ZGUiOi0xNDcuMzQ5NCwibGF0aXR1ZGUiOjY0Ljc1MTEsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2VtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn19LHsiaWQiOiIzIiwidHlwZSI6ImhhemFyZCIsImF0dHJpYnV0ZXMiOnsidGl0bGUiOiJQYXJraW5nIExvdCIsImRlc2NyaXB0aW9uIjoiaXMgc3VwZXIgc2tldGNoIiwibG9uZ2l0dWRlIjotMTA0Ljc2Njc3OSwibGF0aXR1ZGUiOjQxLjEzNzg1OSwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifX0seyJpZCI6IjQiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkJpZyAnb2wgcG90aG9sZSIsImRlc2NyaXB0aW9uIjoiTGlrZSBTVVBFUiBiaWciLCJsb25naXR1ZGUiOi0xMDQuNzcyOTcsImxhdGl0dWRlIjo0MS4xNDMyLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fV19
-  recorded_at: Mon, 08 Nov 2021 23:41:05 GMT
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"3","type":"hazard","attributes":{"title":"Parking
+        Lot","description":"is super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"4","type":"hazard","attributes":{"title":"Big
+        ''ol pothole","description":"Like SUPER big","longitude":-104.77297,"latitude":41.1432,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}]}'
+  recorded_at: Thu, 11 Nov 2021 17:38:49 GMT
 recorded_with: VCR 6.0.0

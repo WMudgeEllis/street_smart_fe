@@ -8,7 +8,6 @@ RSpec.describe 'landing page' do
     expect(page).to have_content('Cheyenne, Wyoming')
     expect(page).to have_content('Parking Lot')
     expect(page).to have_content("Big 'ol pothole")
-    expect(page).to have_content('North Pole, Alaska')
   end
 
   xit 'can create a user with Oauth', :vcr do
