@@ -2,6 +2,8 @@
 
 This is the front end to the street smart project. It is currently deployed on heroku [here](https://street-smart-fe.herokuapp.com/). This application is designed to allow users to add hazards that they see when out and about. Other users can view hazards, vote on the credibility of a hazard, and see walking safety information for their current location.
 
+[Street Smart Back End](https://github.com/WMudgeEllis/street_smart_be)
+
 ### Database Schema
 
 <img width="482" alt="Screen Shot 2021-11-11 at 10 40 28 AM" src="https://user-images.githubusercontent.com/75844153/141326402-b45da032-ef73-4c0e-a94f-c71ea2b398ee.png">
