@@ -7,6 +7,9 @@
   </script>
 <% end %>
 
+<%= render 'navbar' %>
+
+
 <p id="notice"><%= notice %></p>
 
 
@@ -14,7 +17,7 @@
 <div class="container">
   <figure class="text-center">
 
-    <p>Welcome to Street Smart! This is an app that allows you to report hazards that you see in your neighborhood as well as view and vote on hazards that others have reported. In order to report a hazard, please log in! </p>
+    <p>Welcome to Street Smart! This app allows you to report hazards you see in your neighborhood as well as view and vote on hazards that others have reported. To report a hazard, please log in! </p>
   </figure>
 
 </div>
@@ -22,7 +25,7 @@
 <div class="container">
   <div class="row row-cols-4">
     <div class="col">
-    <h1>Recent and Closest Hazards</h1>
+    <h3>Closest Hazards</h3>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -43,11 +46,10 @@
         <% end %>
       </tbody>
     </table>
+
     </div>
     <div class="col"></div>
     <div class="col">
-      <%= button_to 'Report a Hazard', new_hazard_path, method: :get %>
-      <%= button_to 'Login With Google', '/auth/google_oauth2', method: :get, local: true %> <br>
       <div id="mapHazard"></div>
     </div>
     <div class="col">

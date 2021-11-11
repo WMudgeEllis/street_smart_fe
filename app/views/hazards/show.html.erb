@@ -1,3 +1,5 @@
+<%= render 'navbar' %>
+
 
 <div class="container">
   <div class="row row-cols-4">
@@ -11,15 +13,19 @@
           <li class="list-group-item">Downvotes: <%= @hazard.downvotes %></li>
         </ul>
         <% if current_user.email == @hazard.email %>
-          <%= button_to 'Delete Hazard', hazard_path(@hazard.id), method: :delete, local: true %>
+        <%= button_to 'Delete Hazard', hazard_path(@hazard.id), method: :delete, local: true %>
         <% end %>
-        <section id="vote">
-          <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
-          <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
-        </section>
       </section>
     </div>
     <div class="col">
+      <section id="vote">
+
+      <br>
+      <br>
+
+      <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
+      <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>
+    </section>
 
     </div>
     <div class="col">
@@ -31,5 +37,6 @@
     </div>
   </div>
 </div>
+<br>
 
-<%= link_to 'Back', dashboard_path %>
+<%= link_to 'Back to Dashboard', dashboard_path %>

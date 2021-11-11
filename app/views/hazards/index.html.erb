@@ -6,6 +6,7 @@
     });
   </script>
 <% end %>
+<%= render 'navbar' %>
 
 <p id="notice"><%= notice %></p>
 
@@ -13,7 +14,7 @@
 <div class="container">
   <div class="row row-cols-4">
     <div class="col">
-    <h1>Hazards</h1>
+    <h3>Closest Hazards</h3>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -34,21 +35,22 @@
         <% end %>
       </tbody>
     </table>
+    <%= button_to 'Report a Hazard', new_hazard_path, method: :get %>
+
     </div>
     <div class="col">
-      <p>
-        The walking score for your approximate area is: <%= "#{@walkscore.score}, #{@walkscore.description}" %> 
-      </p>
+      <ul>
+      <h5>The walking score for your area is: </h5>
+      <h3><%= "#{@walkscore.score}" %></h3>
+      <h5><%= "#{@walkscore.description}" %></h5>
+    </ul>
     </div>
+
     <div class="col">
-      <%= button_to 'Report a Hazard', new_hazard_path, method: :get %><br>
       <div id="mapHazard"></div>
     </div>
     <div class="col">
     </div>
   </div>
 </div>
-
-
-
 <br>
