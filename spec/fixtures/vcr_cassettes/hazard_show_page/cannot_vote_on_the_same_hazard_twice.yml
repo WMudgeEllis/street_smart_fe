@@ -1,0 +1,473 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:03 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"11e79a73de907d4c5afd6c95eca59ec3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ff841a1-4f59-4bff-8a06-332123c16608
+      X-Runtime:
+      - '0.023574'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"hazard","attributes":{"title":"Parking Lot","description":"is
+        super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:03 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7dd731d9-6051-427b-8a12-679a600c2a6f
+      X-Runtime:
+      - '0.758512'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:04 GMT
+- request:
+    method: put
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/3?upvote=12&user_email=admin@admin.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7313bdfa-1fd1-4836-933b-fb3723ccc098
+      X-Runtime:
+      - '0.006163'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '404'
+  recorded_at: Thu, 11 Nov 2021 17:38:05 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"11e79a73de907d4c5afd6c95eca59ec3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 35754d7f-29c7-4a9c-9cc8-217be507b1f0
+      X-Runtime:
+      - '0.048725'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"hazard","attributes":{"title":"Parking Lot","description":"is
+        super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:05 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 25e26653-8476-4ac8-80d9-c0768afbfc25
+      X-Runtime:
+      - '0.636979'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:06 GMT
+- request:
+    method: put
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/3?upvote=12&user_email=admin@admin.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 41a82cc6-ac90-47ba-9de9-ddc762a766a4
+      X-Runtime:
+      - '0.014985'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '404'
+  recorded_at: Thu, 11 Nov 2021 17:38:06 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"11e79a73de907d4c5afd6c95eca59ec3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 572401dc-f298-44e4-b46f-dfc960df679c
+      X-Runtime:
+      - '0.023598'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"hazard","attributes":{"title":"Parking Lot","description":"is
+        super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:07 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11d9ad8b-fd03-4d49-ac1b-c6d21c05c3cb
+      X-Runtime:
+      - '0.432130'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:07 GMT
+- request:
+    method: put
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/3?downvote=2&user_email=admin@admin.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0e8b2cb4-a19a-402a-a6b7-3bac525a2cbc
+      X-Runtime:
+      - '0.005910'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '404'
+  recorded_at: Thu, 11 Nov 2021 17:38:08 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"11e79a73de907d4c5afd6c95eca59ec3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 83511103-2150-4363-a1d7-53989cf898fa
+      X-Runtime:
+      - '0.012054'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"hazard","attributes":{"title":"Parking Lot","description":"is
+        super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:08 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 17:38:08 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1730a833-c474-4fcd-83e2-c8bc614c7978
+      X-Runtime:
+      - '0.630359'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 17:38:09 GMT
+recorded_with: VCR 6.0.0

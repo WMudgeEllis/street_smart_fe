@@ -2,8 +2,6 @@ require "rails_helper"
 
 RSpec.describe 'hazard show page' do
 
-  #tests may behave oddly depending on stubing
-
   before :each do
     @user1 = User.create!(email: 'admin@admin.com')
     @user2 = User.create!(email: 'nice@sweet.com')
@@ -45,16 +43,22 @@ RSpec.describe 'hazard show page' do
     expect(page).to have_content('Downvotes: 2')
   end
 
-  xit 'cannot vote on the same hazard twice', :vcr do
-    # Need code to authenticate user/log them in as user with id 1
+  it 'cannot vote on the same hazard twice', :vcr do
     visit '/hazards/3'
 
     click_on 'Upvote'
 
     expect(current_path).to eq('/hazards/3')
 
-    expect(page).to_not have_button('Upvote')
-    expect(page).to_not have_button('Downvote')
+    expect(page).to have_content('Upvotes: 11')
+
+    click_on 'Upvote'
+
+    expect(page).to have_content('Upvotes: 11')
+
+    click_on 'Downvote'
+
+    expect(page).to have_content('Downvotes: 1')    
   end
 
   it 'does not see button to delete hazard when not the owner', :vcr do
@@ -74,5 +78,4 @@ RSpec.describe 'hazard show page' do
     expect(current_path).to eq(dashboard_path)
     expect(page).to_not have_content('Cheyenne, Wyoming')
   end
-
 end

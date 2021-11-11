@@ -16,7 +16,6 @@ class HazardService
   def self.create_hazard(params)
     params[:latitude] = params[:latitude].to_f
     params[:longitude] = params[:longitude].to_f
-
     results = Client.conn.post('/api/v1/hazards', params)
     Client.parse_data(results)
   end
