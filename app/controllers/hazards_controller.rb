@@ -4,7 +4,7 @@ class HazardsController < ApplicationController
   def index
     ip = request.ip
     if ip == "::1" || ip == "127.0.0.1"
-      ip = '13.71.196.84'
+      ip = '47.28.194.109'
     end
     @hazards = HazardFacade.all_hazards(ip)
     @hazards_coords = @hazards.map do |hazard|
@@ -16,7 +16,7 @@ class HazardsController < ApplicationController
   def show
     ip = request.ip
     if ip == "::1" || ip == "127.0.0.1"
-      ip = '13.71.196.84'
+      ip = '47.28.194.109'
     end
     @hazard = HazardFacade.one_hazard(params[:id])
     @walkscore = WalkScoreFacade.walk_score(ip)
@@ -30,7 +30,7 @@ class HazardsController < ApplicationController
   def new
     ip = request.ip
     if request.ip == "::1" || request.ip == "127.0.0.1"
-      ip = '73.95.222.170'
+      ip = '47.28.194.109'
     end
     @user_coords = Geocoder.search(ip).first.coordinates
   end

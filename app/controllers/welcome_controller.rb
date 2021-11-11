@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     ip = request.ip
     if ip == "::1" || ip == "127.0.0.1"
-      ip = '13.71.196.84'
+      ip = '47.28.194.109'
     end
     @hazards= HazardFacade.all_hazards(ip)
     @hazards_coords = @hazards.map do |hazard|

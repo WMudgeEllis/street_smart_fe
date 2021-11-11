@@ -10,9 +10,9 @@
           <li class="list-group-item">Upvotes: <%= @hazard.upvotes %></li>
           <li class="list-group-item">Downvotes: <%= @hazard.downvotes %></li>
           <% if current_user.email == @hazard.email %>
-          <li><%= button_to 'Delete Hazard', hazard_path, method: :delete, local: true %></li>
           <% end %>
         </ul>
+        <%= button_to 'Delete Hazard', hazard_path(@hazard.id), method: :delete, local: true %>
         <section id="vote">
           <%= button_to 'Upvote', vote_path, params: { upvote: true, votes: @hazard.upvotes }, method: :put, local: true %>
           <%= button_to 'Downvote', vote_path, params: { downvote: true, votes: @hazard.downvotes }, method: :put, local: true %>

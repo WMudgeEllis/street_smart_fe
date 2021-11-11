@@ -35,7 +35,11 @@
       </tbody>
     </table>
     </div>
-    <div class="col"></div>
+    <div class="col">
+      <p>
+        The walking score for your approximate area is: <%= "#{@walkscore.score}, #{@walkscore.description}" %> 
+      </p>
+    </div>
     <div class="col">
       <%= button_to 'Report a Hazard', new_hazard_path, method: :get %><br>
       <div id="mapHazard"></div>
