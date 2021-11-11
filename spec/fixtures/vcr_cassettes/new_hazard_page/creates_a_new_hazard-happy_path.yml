@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/47.28.194.109/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 11 Nov 2021 20:15:03 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "47.28.194.109",
+          "hostname": "047-028-194-109.res.spectrum.com",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.1437,-104.7962",
+          "org": "AS33588 Charter Communications",
+          "postal": "82001",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Thu, 11 Nov 2021 20:15:03 GMT
+- request:
+    method: post
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards
+    body:
+      encoding: UTF-8
+      string: category=animate&description=A+danger+noodle&latitude=41.1437&longitude=-104.7962&title=Snake&user_email=admin%40admin.com
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 20:15:02 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"37f897befd81c62011cf28b86864b39d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 38a167ed-cf3f-484e-928e-a6ff84e9518e
+      X-Runtime:
+      - '0.016477'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"8","type":"hazard","attributes":{"title":"Snake","description":"A
+        danger noodle","longitude":-104.7962,"latitude":41.1437,"category":"animate","vote_data":{"upvote":"0","downvote":"0"},"user_email":"admin@admin.com"}}}'
+  recorded_at: Thu, 11 Nov 2021 20:15:03 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 20:15:16 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"10f875f62a87672871fffec6dfb65978"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - df959c85-cfe1-4899-8a54-92fb6a8fe97c
+      X-Runtime:
+      - '0.077447'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
+        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"3","type":"hazard","attributes":{"title":"Parking
+        Lot","description":"is super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"4","type":"hazard","attributes":{"title":"Big
+        ''ol pothole","description":"Like SUPER big","longitude":-104.77297,"latitude":41.1432,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"6","type":"hazard","attributes":{"title":"Bianca","description":"Is
+        a big bad dog","longitude":-104.833333,"latitude":41.141866,"category":"animate","vote_data":{"upvote":"1","downvote":"0"},"user_email":"idaolson@gmail.com"}},{"id":"8","type":"hazard","attributes":{"title":"Snake","description":"A
+        danger noodle","longitude":-104.7962,"latitude":41.1437,"category":"animate","vote_data":{"upvote":"0","downvote":"0"},"user_email":"admin@admin.com"}}]}'
+  recorded_at: Thu, 11 Nov 2021 20:15:16 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 20:15:17 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 84635382-ef4c-488b-ac28-fcf51b72da8c
+      X-Runtime:
+      - '0.488642'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 20:15:17 GMT
+recorded_with: VCR 6.0.0
