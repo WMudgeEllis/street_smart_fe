@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/47.28.194.109/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 11 Nov 2021 20:35:50 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "47.28.194.109",
+          "hostname": "047-028-194-109.res.spectrum.com",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.1437,-104.7962",
+          "org": "AS33588 Charter Communications",
+          "postal": "82001",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Thu, 11 Nov 2021 20:35:50 GMT
+- request:
+    method: post
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards
+    body:
+      encoding: UTF-8
+      string: category=animate&description=+&latitude=41.1437&longitude=-104.7962&title=Snake&user_email=admin%40admin.com
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 20:35:50 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 1c122da6-42b5-4a8b-a3db-efdbddec0f72
+      X-Runtime:
+      - '0.014038'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '404'
+  recorded_at: Thu, 11 Nov 2021 20:35:50 GMT
+- request:
+    method: get
+    uri: http://ipinfo.io/47.28.194.109/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 11 Nov 2021 20:35:50 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '1'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "47.28.194.109",
+          "hostname": "047-028-194-109.res.spectrum.com",
+          "city": "Cheyenne",
+          "region": "Wyoming",
+          "country": "US",
+          "loc": "41.1437,-104.7962",
+          "org": "AS33588 Charter Communications",
+          "postal": "82001",
+          "timezone": "America/Denver",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Thu, 11 Nov 2021 20:35:50 GMT
+recorded_with: VCR 6.0.0
