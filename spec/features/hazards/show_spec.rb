@@ -33,7 +33,7 @@ RSpec.describe 'hazard show page' do
   end
 
   it 'can downvote the hazard', :vcr do
-    visit '/hazards/1'
+    visit '/hazards/2'
 
     expect(page).to have_content('Downvotes: 1')
 
@@ -41,17 +41,17 @@ RSpec.describe 'hazard show page' do
 
     click_on 'Downvote'
 
-    expect(current_path).to eq('/hazards/1')
+    expect(current_path).to eq('/hazards/2')
     expect(page).to have_content('Downvotes: 2')
   end
 
   xit 'cannot vote on the same hazard twice', :vcr do
     # Need code to authenticate user/log them in as user with id 1
-    visit '/hazards/1'
+    visit '/hazards/3'
 
     click_on 'Upvote'
 
-    expect(current_path).to eq('/hazards/1')
+    expect(current_path).to eq('/hazards/3')
 
     expect(page).to_not have_button('Upvote')
     expect(page).to_not have_button('Downvote')
