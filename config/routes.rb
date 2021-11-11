@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :votes, only: :update
   # post '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/google_oauth2/callback', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 end
