@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:56 GMT
+      - Thu, 11 Nov 2021 01:15:25 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9b140eeb-276e-4df1-844c-aa41e1ab6193
+      - 626ffbcf-9e9b-464e-9277-8b91a18fec2b
       X-Runtime:
-      - '0.007870'
+      - '0.006359'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,7 +42,50 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
         Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:57 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:26 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:26 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b9f9ec5f-f186-41f0-bdd2-9c2751ef2151
+      X-Runtime:
+      - '0.316923'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:27 GMT
 - request:
     method: put
     uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?upvote=11&user_email=admin@admin.com
@@ -66,7 +109,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:57 GMT
+      - Thu, 11 Nov 2021 01:15:27 GMT
       Content-Length:
       - '0'
       Connection:
@@ -74,15 +117,15 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c2aea41c-8bd8-4900-ba33-62939a52a283
+      - 236c335d-0aaf-4fa9-8668-66e666ef9ecf
       X-Runtime:
-      - '0.009091'
+      - '0.018756'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:27 GMT
 - request:
     method: get
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
@@ -104,7 +147,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:58 GMT
+      - Thu, 11 Nov 2021 01:15:27 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -114,9 +157,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f08a346b-e06e-4f08-bab3-0604d11ead56
+      - cb6b8902-87c0-4663-bfef-f13af31525cc
       X-Runtime:
-      - '0.006301'
+      - '0.006080'
       Transfer-Encoding:
       - chunked
       Via:
@@ -125,5 +168,48 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
         Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:27 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:28 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fc550a99-4697-4c32-b34b-b62d22e7c910
+      X-Runtime:
+      - '0.362946'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:28 GMT
 recorded_with: VCR 6.0.0

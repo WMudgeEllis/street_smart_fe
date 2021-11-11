@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 18:24:07 GMT
+      - Thu, 11 Nov 2021 01:15:31 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 12744ef9-1982-488b-9c55-7035f68ec9d3
+      - 6bfe81e8-3db5-484f-9f1e-d818e5d2b88d
       X-Runtime:
-      - '0.008683'
+      - '0.006280'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,7 +42,50 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
         Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:31 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:31 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32e81fa7-73d4-4b3b-85d5-8bdbb1a9384e
+      X-Runtime:
+      - '0.361435'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:32 GMT
 - request:
     method: delete
     uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
@@ -64,7 +107,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 18:24:07 GMT
+      - Thu, 11 Nov 2021 01:15:32 GMT
       Content-Length:
       - '0'
       Connection:
@@ -72,18 +115,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 3b02a592-d2af-4473-a2ed-6f039db09bc0
+      - 545df529-5c5e-47f7-a912-32b7eb65e9e1
       X-Runtime:
-      - '0.012588'
+      - '0.012766'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Mon, 08 Nov 2021 18:24:07 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:32 GMT
 - request:
     method: get
-    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=127.0.0.1
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards?ip=47.28.194.109
     body:
       encoding: US-ASCII
       string: ''
@@ -102,26 +145,70 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 18:24:07 GMT
+      - Thu, 11 Nov 2021 01:15:32 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5e75a933110c0f9dcdace7d1507bb4b6"
+      - W/"11eb6112456a344dc0f1a19ef1606a95"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a18ac718-cc37-457b-806e-69918d1c4426
+      - 8de0ef2a-5f3f-4e14-9053-395a146de6ba
       X-Runtime:
-      - '0.014842'
+      - '0.043201'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjIiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6Ik5vcnRoIFBvbGUsIEFsYXNrYSIsImRlc2NyaXB0aW9uIjoiSmUgc3VpcyBmYWl0IGNvbW1lIMOnYSIsImxvbmdpdHVkZSI6LTE0Ny4zNDk0LCJsYXRpdHVkZSI6NjQuNzUxMSwiY2F0ZWdvcnkiOiJhbmltYXRlIiwidm90ZV9kYXRhIjp7InVwdm90ZSI6IjEwIiwiZG93bnZvdGUiOiIxIn0sInVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20ifX0seyJpZCI6IjMiLCJ0eXBlIjoiaGF6YXJkIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IlBhcmtpbmcgTG90IiwiZGVzY3JpcHRpb24iOiJpcyBzdXBlciBza2V0Y2giLCJsb25naXR1ZGUiOi0xMDQuNzY2Nzc5LCJsYXRpdHVkZSI6NDEuMTM3ODU5LCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fSx7ImlkIjoiNCIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiQmlnICdvbCBwb3Rob2xlIiwiZGVzY3JpcHRpb24iOiJMaWtlIFNVUEVSIGJpZyIsImxvbmdpdHVkZSI6LTEwNC43NzI5NywibGF0aXR1ZGUiOjQxLjE0MzIsImNhdGVnb3J5IjoiYW5pbWF0ZSIsInZvdGVfZGF0YSI6eyJ1cHZvdGUiOiIxMCIsImRvd252b3RlIjoiMSJ9LCJ1c2VyX2VtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn19XX0=
-  recorded_at: Mon, 08 Nov 2021 18:24:08 GMT
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"hazard","attributes":{"title":"Parking Lot","description":"is
+        super sketch","longitude":-104.766779,"latitude":41.137859,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}},{"id":"4","type":"hazard","attributes":{"title":"Big
+        ''ol pothole","description":"Like SUPER big","longitude":-104.77297,"latitude":41.1432,"category":"animate","vote_data":{"upvote":"10","downvote":"1"},"user_email":"admin@admin.com"}}]}'
+  recorded_at: Thu, 11 Nov 2021 01:15:32 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:33 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c19a327-95c9-4278-9831-7421f762ae0e
+      X-Runtime:
+      - '0.388171'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:33 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/2
     body:
       encoding: US-ASCII
       string: ''
@@ -21,31 +21,74 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:57 GMT
+      - Thu, 11 Nov 2021 01:15:28 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"542e1f49fbfe2c44d2ee71515475e70e"
+      - W/"789113d94ffb5909808210a4b46b59b8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d22e0db2-7394-400e-8827-cafb9c865e80
+      - 25a7fed9-4354-4b26-a3df-a400eaccd2c6
       X-Runtime:
-      - '0.006269'
+      - '0.006391'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMiIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiTm9ydGggUG9sZSwgQWxhc2thIiwiZGVzY3JpcHRpb24iOiJKZSBzdWlzIGZhaXQgY29tbWUgw6dhIiwibG9uZ2l0dWRlIjotMTQ3LjM0OTQsImxhdGl0dWRlIjo2NC43NTExLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjEifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fX0=
+  recorded_at: Thu, 11 Nov 2021 01:15:28 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:28 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a7bcb5f-6dcd-472d-869e-d0c3c0e4fcc9
+      X-Runtime:
+      - '0.378018'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"1"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:29 GMT
 - request:
     method: put
-    uri: https://street-smart-be.herokuapp.com/api/v1/votes/1?downvote=2&user_email=admin@admin.com
+    uri: https://street-smart-be.herokuapp.com/api/v1/votes/2?downvote=2&user_email=admin@admin.com
     body:
       encoding: UTF-8
       string: ''
@@ -66,7 +109,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:58 GMT
+      - Thu, 11 Nov 2021 01:15:29 GMT
       Content-Length:
       - '0'
       Connection:
@@ -74,18 +117,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - fe064276-9bb2-40e2-a13d-b53dc01204ab
+      - 0e5c0f7f-5f47-41f9-85ee-eb08b28d52b8
       X-Runtime:
-      - '0.010722'
+      - '0.018418'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 09 Nov 2021 17:45:58 GMT
+  recorded_at: Thu, 11 Nov 2021 01:15:29 GMT
 - request:
     method: get
-    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/1
+    uri: https://street-smart-be.herokuapp.com/api/v1/hazards/2
     body:
       encoding: US-ASCII
       string: ''
@@ -104,26 +147,69 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 17:45:58 GMT
+      - Thu, 11 Nov 2021 01:15:29 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bb17d95331beca419e9bf788773dc668"
+      - W/"578b510fb72f1e85e39514cd58553b91"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6604562-d901-47a6-b188-f57cafed537c
+      - bfd778b3-dc11-470b-af2e-923f51ab9c76
       X-Runtime:
-      - '0.006277'
+      - '0.006466'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMiIsInR5cGUiOiJoYXphcmQiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiTm9ydGggUG9sZSwgQWxhc2thIiwiZGVzY3JpcHRpb24iOiJKZSBzdWlzIGZhaXQgY29tbWUgw6dhIiwibG9uZ2l0dWRlIjotMTQ3LjM0OTQsImxhdGl0dWRlIjo2NC43NTExLCJjYXRlZ29yeSI6ImFuaW1hdGUiLCJ2b3RlX2RhdGEiOnsidXB2b3RlIjoiMTAiLCJkb3dudm90ZSI6IjIifSwidXNlcl9lbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9fX0=
+  recorded_at: Thu, 11 Nov 2021 01:15:29 GMT
+- request:
+    method: get
+    uri: https://street-smart-be.herokuapp.com/api/v1/walkscore?ip=47.28.194.109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 11 Nov 2021 01:15:30 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a7aada66913cee0db08f918f0e6321f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c42c17c8-0edc-43a9-8aa6-42a9931c4a93
+      X-Runtime:
+      - '0.333073'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"hazard","attributes":{"title":"Cheyenne,
-        Wyoming","description":"Je suis comme je suis","longitude":-104.8202,"latitude":41.14,"category":"inanimate","vote_data":{"upvote":"11","downvote":"2"},"user_email":"admin@admin.com"}}}'
-  recorded_at: Tue, 09 Nov 2021 17:45:59 GMT
+      string: '{"data":{"id":null,"type":"score","attributes":{"score":67,"description":"Somewhat
+        Walkable"}}}'
+  recorded_at: Thu, 11 Nov 2021 01:15:30 GMT
 recorded_with: VCR 6.0.0
