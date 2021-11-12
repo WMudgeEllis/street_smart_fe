@@ -2,7 +2,7 @@
 
 This is the front end to the street smart project. It is currently deployed on heroku [here](https://street-smart-fe.herokuapp.com/). This application is designed to allow users to add hazards that they see when out and about. Other users can view hazards, vote on the credibility of a hazard, and see walking safety information for their current location.
 
-[Street Smart Back End](https://github.com/WMudgeEllis/street_smart_be)
+[Street Smart Back End Repo](https://github.com/WMudgeEllis/street_smart_be)
 
 ### Database Schema
 
@@ -26,6 +26,15 @@ This is the front end to the street smart project. It is currently deployed on h
 ![Circle CI](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
 ![Faraday](https://img.shields.io/badge/faraday-b81818.svg?&style=flaste&logo=rubygems&logoColor=white)
 
+#### Development Principles
+<p>
+  <img src="https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white" />
+  <img src="https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white" />
+  <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
+</p>
+
+
 ### Instructions for local deployment
   
   ```
@@ -38,6 +47,23 @@ This is the front end to the street smart project. It is currently deployed on h
   bundle exec figaro install
   
   ```
+  
+### Access Constraints 
+
+  - To report new hazards on the application, users will need to authenticate using Google. The application landing page will show users a map with nearby hazards, but only after authentication can users create, vote on, and delete hazards. 
+
+
+### Reporting Hazards
+
+  - To report a hazard, authenticated users will need to drag and drop the pin on the dynamic map to the place where the witnessed the hazard. After moving the pin, the authenticated user will need to enter a tile, an optional description, and select whether the hazard is an animate or inanimate hazard.
+
+### Voting on Hazards
+
+  - Authenticated users have the opportunity to vote on any hazard. Users can only upvote or downvote on a specific hazard once. Vote coutns are displayed on each hazards show page
+
+### Deleting a Hazard 
+
+  - After creating a hazard, an authenticated user has the ability to delete any of their own hazards. This allows for users to remove hazards with errors or that are no longer relevant to the commmunity. 
   
 ### Authorization for API usage
   
