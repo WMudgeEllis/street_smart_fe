@@ -4,6 +4,10 @@ This is the front end to the street smart project. It is currently deployed on h
 
 [Street Smart Back End Repo](https://github.com/WMudgeEllis/street_smart_be)
 
+### Live Deployment
+
+![Street Smart Dashboard](https://user-images.githubusercontent.com/81930253/141603140-5511be6a-f7fe-4568-91aa-e0bae034b585.png)
+
 ### Database Schema
 
 <img width="482" alt="Screen Shot 2021-11-11 at 10 40 28 AM" src="https://user-images.githubusercontent.com/75844153/141326402-b45da032-ef73-4c0e-a94f-c71ea2b398ee.png">
